@@ -22,3 +22,12 @@ module appService 'modules/app-service.bicep' = {
     appServiceAppName: appServiceAppName
   }
 }
+
+module cosmosDB 'modules/cosmos-db.bicep' = {
+  name: 'cosmos-db'
+  params: {
+    location: location
+    environmentType: environmentType
+    cosmosDBAccountName: cosmosDBAccountName
+  }
+}
